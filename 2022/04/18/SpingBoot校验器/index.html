@@ -159,6 +159,9 @@ MathJax = {
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StuValidation</span> &#123;</span><br><span class="line">  <span class="meta">@NotBlank</span></span><br><span class="line">  <span class="keyword">private</span> String stuName;</span><br><span class="line">  <span class="meta">@DecimalMin(&quot;60.0&quot;)</span></span><br><span class="line">  <span class="keyword">private</span> Double javaGrade;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    其中@NotBlank要求学生名字属性不为空，@DecimalMin要求Java成绩必须为数字且大于60分。</p>
+<p>​    常用校验器:</p>
+<p>​    <img src="/2022/04/18/SpingBoot%E6%A0%A1%E9%AA%8C%E5%99%A8/Consraint1.jpg" alt="SpringMVC"></p>
+<p>​    <img src="/2022/04/18/SpingBoot%E6%A0%A1%E9%AA%8C%E5%99%A8/Consraint2.jpg" alt="SpringMVC"></p>
 <h4 id="2-学生类与联系方式类组合校验"><a href="#2-学生类与联系方式类组合校验" class="headerlink" title="2.学生类与联系方式类组合校验"></a>2.学生类与联系方式类组合校验</h4><p>​    对类中的对象成员属性校验，需要在对象属性上标注@Valid，然后在对象所属类中标注校验规则，如下的学生类与联系方式属性。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StuValidation</span> &#123;</span><br><span class="line">  <span class="meta">@Valid</span></span><br><span class="line">  <span class="keyword">private</span> ContactDetails contact;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
